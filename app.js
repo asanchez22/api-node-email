@@ -16,8 +16,6 @@ var app = express();
 app.set("views", path.join(__dirname, "src", "views"));
 app.set("view engine", "ejs");
 
-console.log(process.env);
-
 // Firebase setup
 const fb = admin.initializeApp({
   credential: admin.credential.cert(keys),
