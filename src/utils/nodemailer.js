@@ -1,12 +1,13 @@
 const nodemailer = require("nodemailer");
+const env = require("dotenv/config");
 
 const email = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
-    user: "viveokeybackoffice@gmail.com",
-    pass: "nouptauctnkvxzrs",
+    user: `${process.env.SMTP_USER}`,
+    pass: `${process.env.SMTP_PASS}`,
   },
 });
 
