@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f1f0;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+img {
+    align-self: center;
+}
+
+.link a {
+    padding: 0.5rem 1.5rem;
+    background-color: #3b82f6;
+    color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+}
