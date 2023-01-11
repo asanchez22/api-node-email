@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
-const env = require("dotenv/config");
-
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const email = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,

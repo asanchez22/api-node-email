@@ -5,10 +5,10 @@ const logger = require("morgan");
 const indexRouter = require("./src/routes/index");
 const keys = require("./serviceAccountKey");
 const admin = require("firebase-admin");
-const dotenv = require("dotenv");
 
-// Environment setup
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 var app = express();
 
