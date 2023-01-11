@@ -5,6 +5,7 @@ const logger = require("morgan");
 const indexRouter = require("./src/routes/index");
 const keys = require("./serviceAccountKey");
 const admin = require("firebase-admin");
+const cors = require("cors");
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -22,6 +23,7 @@ const fb = admin.initializeApp({
 });
 
 // Config express
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
